@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+  <task-flow-definition id="EmployeeViewController-task-flow">
+    <default-activity>EmployeeHome</default-activity>
+    <view id="EmployeeHome">
+      <page>/EmployeeHome.amx</page>
+    </view>
+    <view id="SteveJobs">
+      <page>/SteveJobs.amx</page>
+    </view>
+    <view id="TimCook">
+      <page>/TimCook.amx</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>EmployeeHome</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>steve</from-outcome>
+        <to-activity-id>SteveJobs</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__3">
+        <from-outcome>tim</from-outcome>
+        <to-activity-id>TimCook</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-mobile-config>

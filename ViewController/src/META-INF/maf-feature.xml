@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
+  <adfmf:feature id="com.k21.emp.security.Employee" name="Employees" securityEnabled="true">
+    <adfmf:content id="com.k21.emp.security.Employee.1">
+      <adfmf:amx file="com.k21.emp.security.Employee/EmployeeViewController-task-flow.xml#EmployeeViewController-task-flow"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="com.k21.emp.security.Departments" name="Departments" securityEnabled="false">
+    <adfmf:content id="com.k21.emp.security.Departments.1">
+      <adfmf:amx file="com.k21.emp.security.Departments/DepartmentViewController-task-flow.xml#DepartmentViewController-task-flow"/>
+    </adfmf:content>
+  </adfmf:feature>
+</adfmf:features>

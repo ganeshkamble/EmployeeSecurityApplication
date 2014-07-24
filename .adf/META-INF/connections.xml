@@ -1,0 +1,58 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="localhost_loginapplication" className="oracle.adf.model.connection.adfmf.LoginConnection"
+             adfCredentialStoreKey="localhost_loginapplication" partial="false" manageInOracleEnterpriseManager="true"
+             deployable="true" xmlns="">
+    <Factory className="oracle.adf.model.connection.adfmf.LoginConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="adfmfLogin">
+        <Contents>
+          <login url="http://192.168.0.100:7101/LoginApplication/login.html"/>
+          <logout url="http://192.168.0.100:7101/LoginApplication/login.html"/>
+          <authenticationMode value="hybrid"/>
+          <idleTimeout value="300"/>
+          <sessionTimeout value="28800"/>
+          <maxFailuresBeforeCredentialCleared value="3"/>
+          <injectCookiesToRestHttpHeader value="true"/>
+          <includeBasicAuthHeader value="true"/>
+          <rememberCredentials>
+            <enableRememberUserName value="true"/>
+            <rememberUserNameDefault value="true"/>
+            <enableRememberPassword value="true"/>
+            <rememberPasswordDefault value="false"/>
+            <enableStayLoggedIn value="true"/>
+            <stayLoggedInDefault value="false"/>
+          </rememberCredentials>
+          <accessControl/>
+          <userObjectFilter/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="HTTPBasicAuthentication" className="oracle.adf.model.connection.adfmf.LoginConnection"
+             adfCredentialStoreKey="HTTPBasicAuthentication" partial="false" manageInOracleEnterpriseManager="true"
+             deployable="true" xmlns="">
+    <Factory className="oracle.adf.model.connection.adfmf.LoginConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="adfmfLogin">
+        <Contents>
+          <login url="http://192.168.0.100:7101/LoginApplication-ViewController-context-root/faces/welcome.jspx"/>
+          <logout url="http://192.168.0.100:7101/LoginApplication-ViewController-context-root/"/>
+          <authenticationMode value="hybrid"/>
+          <idleTimeout value="300"/>
+          <sessionTimeout value="28800"/>
+          <maxFailuresBeforeCredentialCleared value="3"/>
+          <injectCookiesToRestHttpHeader value="true"/>
+          <includeBasicAuthHeader value="true"/>
+          <rememberCredentials>
+            <enableRememberUserName value="true"/>
+            <rememberUserNameDefault value="true"/>
+            <enableRememberPassword value="false"/>
+            <enableStayLoggedIn value="false"/>
+          </rememberCredentials>
+          <accessControl/>
+          <userObjectFilter/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>

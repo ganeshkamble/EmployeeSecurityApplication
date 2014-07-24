@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf"
+                   version="1.0" name="EmployeeSecurityApplication" id="com.k21.EmployeeSecurityApplication"
+                   appControllerFolder="ApplicationController"
+                   listener-class="com.k21.emp.security.application.LifeCycleListenerImpl">
+  <adfmf:description>Employee Security Application</adfmf:description>
+  <adfmf:featureReference id="com.k21.emp.security.Employee" loginConnRefId="HTTPBasicAuthentication"/>
+  <adfmf:featureReference id="com.k21.emp.security.Departments" loginConnRefId="localhost_loginapplication"/>
+  <adfmf:login defaultConnRefId="HTTPBasicAuthentication"/>
+</adfmf:application>

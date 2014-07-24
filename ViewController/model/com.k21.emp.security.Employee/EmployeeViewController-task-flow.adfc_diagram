@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">EmployeeHome</property>
+      <property
+         name="page">/EmployeeHome.amx</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>EmployeeHome&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">203.80078</property>
+      <property
+         name="x">132.0</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">SteveJobs</property>
+      <property
+         name="page">/SteveJobs.amx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>SteveJobs&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">97.86719</property>
+      <property
+         name="x">501.0</property>
+   </View>
+   <View
+      id="View4">
+      <property
+         name="activityId">TimCook</property>
+      <property
+         name="page">/TimCook.amx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>TimCook&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">319.8672</property>
+      <property
+         name="x">469.0</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">steve</property>
+      <property
+         name="sdm:polyPoints">R50,173.0,203.73438,460.0,97.80078,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="View2"
+      to="View4">
+      <property
+         name="fromOutcome">tim</property>
+      <property
+         name="sdm:polyPoints">R54,173.0,207.23438,428.0,319.80078,L50</property>
+   </ControlFlowCase>
+</SDM>
